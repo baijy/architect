@@ -11,6 +11,6 @@ import org.springframework.aop.MethodBeforeAdvice;
 public class GreetingBeforeAdvice implements MethodBeforeAdvice {
 	public void before(Method arg0, Object[] args, Object obj) throws Throwable {
 		String clientName = (String) args[0];
-		System.out.println("面带笑容，满怀热忱地走向：" + clientName);
+		System.out.println("----【before】面带笑容，满怀热忱地走向：" + clientName);
 	}
 }

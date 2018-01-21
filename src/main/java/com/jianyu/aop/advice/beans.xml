@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xsi:schemaLocation="  
+    http://www.springframework.org/schema/context  
+    http://www.springframework.org/schema/context/spring-context.xsd  
+    http://www.springframework.org/schema/beans  
+    http://www.springframework.org/schema/beans/spring-beans.xsd  
+    http://www.springframework.org/schema/tx  
+    http://www.springframework.org/schema/tx/spring-tx.xsd  
+    http://www.springframework.org/schema/jdbc  
+    http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd  
+    http://www.springframework.org/schema/cache  
+    http://www.springframework.org/schema/cache/spring-cache-3.1.xsd  
+    http://www.springframework.org/schema/aop  
+    http://www.springframework.org/schema/aop/spring-aop.xsd  
+    http://www.springframework.org/schema/util  
+    http://www.springframework.org/schema/util/spring-util.xsd">
+	<!-- 环绕增强 -->
+	<!-- 定义增强 -->
+	<bean id="greetingAround" class="com.jianyu.aop.advice.GreetingInterceptor" />
+	<!-- 定义目标 -->
+	<bean id="target" class="com.jianyu.aop.advice.NaiveWaiter" />
+	<!-- 将增强应用到目标上，需要定义接口，和代理工厂 -->
+	<bean id="waiter" class="org.springframework.aop.framework.ProxyFactoryBean"
+		p:proxyInterfaces="com.jianyu.aop.advice.Waiter" p:target-ref="target"
+		p:interceptorNames="greetingAround,greetingAfter" />
+
+	<!-- 后置增强 -->
+	<!-- 定义增强 -->
+	<bean id="greetingAfter" class="com.jianyu.aop.advice.GreetingAfterAdvice" />
+	<!-- 目标相同不用重复定义 -->
+	<!-- 绑定在上面合并 -->
+</beans>  
