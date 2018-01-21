@@ -1,18 +1,18 @@
 package com.jianyu.aop.advice;
 
 /**
- * Ò»¸öÄêÇáµÄ·şÎñÔ±
+ * ä¸€ä¸ªå¹´è½»çš„æœåŠ¡å‘˜
  * @author jianyu.bai
  *
  */
 public class NaiveWaiter implements Waiter {
 
 	public void greeTo(String name) {
-		System.out.println("ÄÃÒÂ·şµÄ·şÎñÔ±Ïò¹Ë¿Í" + name + "ÎÊºÃ");
+		System.out.println("æ‹¿è¡£æœçš„æœåŠ¡å‘˜å‘é¡¾å®¢" + name + "é—®å¥½");
 	}
 
 	public void serveTo(String name) {
-		System.out.println("ÄÃÒÂ·şµÄ·şÎñÔ±Îª¹Ë¿Í" + name + "·şÎñ");
+		System.out.println("æ‹¿è¡£æœçš„æœåŠ¡å‘˜ä¸ºé¡¾å®¢" + name + "æœåŠ¡");
 	}
 
 }

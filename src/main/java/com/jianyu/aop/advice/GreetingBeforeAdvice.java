@@ -4,13 +4,13 @@ import java.lang.reflect.Method;
 import org.springframework.aop.MethodBeforeAdvice;
 
 /**
- * 方法前的增强
+ * 鏂规硶鍓嶇殑澧炲己
  * @author jianyu.bai
  *
  */
 public class GreetingBeforeAdvice implements MethodBeforeAdvice {
 	public void before(Method arg0, Object[] args, Object obj) throws Throwable {
 		String clientName = (String) args[0];
-		System.out.println("面带笑容，满怀热忱地走向：" + clientName);
+		System.out.println("闈㈠甫绗戝锛屾弧鎬�鐑勘鍦拌蛋鍚戯細" + clientName);
 	}
 }

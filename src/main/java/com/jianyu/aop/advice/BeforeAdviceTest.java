@@ -4,7 +4,7 @@ import org.springframework.aop.BeforeAdvice;
 import org.springframework.aop.framework.ProxyFactory;
 
 /**
- * ÔöÇ¿Àà²âÊÔ
+ * å¢å¼ºç±»æµ‹è¯•
  * 
  * @author jianyu.bai
  * 
@@ -14,16 +14,16 @@ public class BeforeAdviceTest {
 	public static void main(String[] args) {
 		Waiter target = new NaiveWaiter();
 		BeforeAdvice advice = new GreetingBeforeAdvice();
-		// SpringÌá¹©µÄ´úÀí¹¤³§
+		// Springæä¾›çš„ä»£ç†å·¥å‚
 		ProxyFactory pf = new ProxyFactory();
-		// ÉèÖÃ´úÀíÄ¿±ê
+		// è®¾ç½®ä»£ç†ç›®æ ‡
 		pf.setTarget(target);
-		// ÎªÄ¿±êÌí¼ÓÔöÇ¿
+		// ä¸ºç›®æ ‡æ·»åŠ å¢å¼º
 		pf.addAdvice(advice);
 
 		Waiter proxy = (Waiter) pf.getProxy();
-		proxy.greeTo("ÀîÏÈÉú");
-		proxy.serveTo("Íõ´ó´¸");
+		proxy.greeTo("æå…ˆç”Ÿ");
+		proxy.serveTo("ç‹å¤§é”¤");
 	}
 
 }
