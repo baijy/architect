@@ -1,12 +1,10 @@
 package com.jianyu.socket.bio;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.net.Socket;
-
 public class PackageInfo {
 	/**
+	 * 参考：
+	 * http://blog.csdn.net/anxpp/article/details/51512200
+	 * 
 	 * 总结起来：
 	 * 服务端代码：
 	 * ServerScoket server = new ServerSocket("12345");
