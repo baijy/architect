@@ -108,11 +108,7 @@ public class ClientHandler implements Runnable {
 					buffer.get(bytes);
 					String result = new String(bytes, "UTF-8");
 					System.out.println("客户端收到消息：" + result);
-				}
-				// 没有读取到字节 忽略
-				// else if(readBytes==0);
-				// 链路已经关闭，释放资源
-				else if (readBytes < 0) {
+				} else {
 					key.cancel();
 					sc.close();
 				}
