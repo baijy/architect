@@ -7,7 +7,7 @@
 	<properties>
 		<spring.version>4.3.12.RELEASE</spring.version>
 	</properties>
-
+	<!-- 架构师课程学习 -->
 	<dependencies>
 		<!-- Spring相关依赖 -->
 		<dependency>
