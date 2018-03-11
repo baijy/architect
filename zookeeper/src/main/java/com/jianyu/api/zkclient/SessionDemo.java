@@ -1,4 +1,4 @@
-package com.jianyu.zookeeper.zkclient;
+package com.jianyu.api.zkclient;
 
 import org.I0Itec.zkclient.ZkClient;
 

@@ -1,4 +1,4 @@
-package com.jianyu.zookeeper.javaapi;
+package com.jianyu.api.javaapi;
 
 import org.apache.zookeeper.*;
 
