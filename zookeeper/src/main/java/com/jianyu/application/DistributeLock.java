@@ -54,6 +54,7 @@ public class DistributeLock {
             if(!lessThanLockid.isEmpty()){
                 String prevLockId = lessThanLockid.last();
                 System.out.println("prevLockId:"+prevLockId);
+                // 注册监听
                 zooKeeper.exists(prevLockId,new LockWatcher(countDownLatch));
                 System.out.println("countDownLatch:"+countDownLatch);
                 // 如果会话超时，节点被删除（释放了）
